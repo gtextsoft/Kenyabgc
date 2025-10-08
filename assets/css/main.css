@@ -99,6 +99,10 @@ h6 {
   overflow: hidden;
 }
 
+.btn{
+  border-radius: 100px !important;
+}
+
 .pulsating-play-btn:before {
   content: "";
   position: absolute;

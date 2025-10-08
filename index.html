@@ -29,6 +29,17 @@
   
   <!-- Custom CSS for Conference -->
   <style>
+    /* Hero Video Background */
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    
     /* Hero Section Enhancements */
     .hero-title {
       font-size: 3.5rem;
@@ -118,20 +129,6 @@
     .pricing-item.featured {
       border: 3px solid #e03a3c;
       position: relative;
-    }
-    
-    .pricing-item.featured::before {
-      content: "MOST POPULAR";
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #e03a3c;
-      color: white;
-      padding: 5px 20px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
     }
     
     /* Button Enhancements */
@@ -351,7 +348,10 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+      <video autoplay muted loop playsinline data-aos="fade-in" class="hero-video">
+        <source src="assets/videos/pbgc.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
       <div class="container d-flex flex-column align-items-center text-center mt-auto">
         <h1 data-aos="fade-up" data-aos-delay="100" class="hero-title mb-3">THE BUSINESS<br><span class="text-primary">GROWTH</span> CONFERENCE</h1>
@@ -361,7 +361,7 @@
         <div class="hero-details" data-aos="fade-up" data-aos-delay="250">
           <div class="row justify-content-center mb-4">
             <div class="col-12">
-              <div class="detail-card p-3 text-center" style="width: 80%; max-width: 800px; margin: 0 auto; height: auto; display: flex; flex-direction: column; justify-content: center;">
+              <!-- <div class="detail-card p-3 text-center" style="width: 80%; max-width: 800px; margin: 0 auto; height: auto; display: flex; flex-direction: column; justify-content: center;">
                 <div class="d-flex align-items-center justify-content-center mb-2">
                   <i class="bi bi-calendar-event me-3" style="font-size: 2rem; color: #e03a3c;"></i>
                   <h5 class="mb-0">Event Details</h5>
@@ -377,20 +377,20 @@
                     <p class="mb-0 fs-6">JW Marriott Hotel Nairobi</p>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
         
         <div data-aos="fade-up" data-aos-delay="300" class="hero-cta">
-          <a href="#buy-tickets" class="btn btn-primary btn-lg me-3 mb-2">Reserve My Seat Now</a>
+          <a href="#buy-tickets" class="btn btn-primary btn-lg me-3 mb-2 rounded-pill">Reserve My Seat Now</a>
           <a href="#what-youll-discover" class="btn btn-outline-light btn-lg mb-2">Learn More</a>
           <p class="small text-light mt-3">6-Hour Intensive Experience • Premium Networking • Actionable Strategies</p>
           
           <!-- Event Info -->
           <div class="event-info mt-4" data-aos="fade-up" data-aos-delay="350">
             <p class="text-light mb-2">November 16th, 2025 • JW Marriott Hotel Nairobi</p>
-            <p class="small text-light">Early bird pricing available while seats last</p>
+            <p class="small text-light">Limited seats available - Only $200 USD</p>
           </div>
         </div>
       </div>
@@ -508,7 +508,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Who Should Come</h2>
-        <p>If you're running a business in Kenya and want to grow it, this conference is for you</p>
+        <p>If you're running a business in Kenya or Africa at large and want to grow it, this conference is for you</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -570,7 +570,11 @@
 
         <div class="row g-0">
           <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8084!2d36.8219!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0x1b8b4b4b4b4b4b4b!2sJW%20Marriott%20Hotel%20Nairobi!5e0!3m2!1sen!2ske!4v1234567890" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            <div class="venue-gallery">
+              <a href="assets/img/past-event/1.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/1.jpg" alt="" class="img-fluid">
+              </a>
+            </div>
           </div>
 
           <div class="col-lg-6 venue-info">
@@ -597,64 +601,64 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-1.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-1.jpg" alt="" class="img-fluid">
+              <a href="assets/img/past-event/3.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/3.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-2.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-2.jpg" alt="" class="img-fluid">
+              <a href="assets/img/past-event/6.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/6.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-3.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-3.jpg" alt="" class="img-fluid">
+              <a href="assets/img/past-event/7.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/7.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-4.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-4.jpg" alt="" class="img-fluid">
+              <a href="assets/img/past-event/8.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/8.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-5.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-5.jpg" alt="" class="img-fluid">
+              <a href="assets/img/past-event/12.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/12.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-6.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-6.jpg" alt="" class="img-fluid">
+              <a href="assets/img/past-event/13.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/13.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-7.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-7.jpg" alt="" class="img-fluid">
+              <a href="assets/img/past-event/14.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/14.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/venue-gallery/venue-gallery-8.jpg" class="glightbox" data-gall="venue-gallery">
-                <img src="assets/img/venue-gallery/venue-gallery-8.jpg" alt="" class="img-fluid">
+              <a href="assets/img/past-event/15.jpg" class="glightbox" data-gall="venue-gallery">
+                <img src="assets/img/past-event/15.jpg" alt="" class="img-fluid">
               </a>
             </div>
           </div>
@@ -670,8 +674,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>EXPERIENCE OUR PAST EVENTS</h2>
-        <p>See the impact of our previous conferences! These powerful moments showcase the transformation, networking, and breakthrough strategies that have helped hundreds of entrepreneurs scale their businesses. Don't miss your chance to be part of this life-changing experience.</p>
+        <h2>TESTIMONIALS FROM OUR PAST EVENTS</h2>
+        <p>See what some of our past attendees have shared about their experience</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -708,14 +712,14 @@
             }
           </script>
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-1.jpg"><img src="assets/img/event-gallery/event-gallery-1.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-2.jpg"><img src="assets/img/event-gallery/event-gallery-2.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-3.jpg"><img src="assets/img/event-gallery/event-gallery-3.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-4.jpg"><img src="assets/img/event-gallery/event-gallery-4.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-5.jpg"><img src="assets/img/event-gallery/event-gallery-5.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-6.jpg"><img src="assets/img/event-gallery/event-gallery-6.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-7.jpg"><img src="assets/img/event-gallery/event-gallery-7.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-8.jpg"><img src="assets/img/event-gallery/event-gallery-8.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/testimonials/testimonial-1.jpg"><img src="assets/img/testimonials/testimonial-1.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/testimonials/testimonial-2.jpg"><img src="assets/img/testimonials/testimonial-2.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/testimonials/testimonial-3.jpg"><img src="assets/img/testimonials/testimonial-3.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/testimonials/testimonial-4.jpg"><img src="assets/img/testimonials/testimonial-4.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/testimonials/testimonial-5.jpg"><img src="assets/img/testimonials/testimonial-5.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/testimonials/testimonial-6.jpg"><img src="assets/img/testimonials/testimonial-6.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/testimonials/testimonial-7.jpg"><img src="assets/img/testimonials/testimonial-7.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/testimonials/testimonial-8.jpg"><img src="assets/img/testimonials/testimonial-8.jpg" class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -872,12 +876,9 @@
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3>What pricing options are available?</h3>
+                <h3>What is the ticket price?</h3>
                 <div class="faq-content">
-                  <p>We offer two main tiers to suit your needs:<br><br>
-                  <strong>Early Bird Ticket:</strong> $200 USD (Limited availability)<br>
-                  <strong>Standard Ticket:</strong> $400 USD<br><br>
-                  Both tiers include full access to all sessions, a premium networking meal, conference materials, and digital resources. We accept payment via credit/debit cards, bank transfer, and mobile payments.</p>
+                  <p>Tickets for the Nairobi Business Growth Conference are $200 USD. This includes full access to all sessions, a premium networking meal, conference materials, and digital resources. We accept payment via credit/debit cards, bank transfer, and mobile payments. Seats are limited, so we encourage you to reserve your spot early.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -929,50 +930,20 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>TICKET OPTIONS</h2>
-        <p>Choose the perfect ticket option for your business growth journey</p>
+        <h2>GET YOUR TICKET</h2>
+        <p>Secure your spot at the Nairobi Business Growth Conference</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-4 pricing-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h3>NAIROBI EDITION - STANDARD</h3>
-            <p class="small">Nairobi | November 16th, 2025</p>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <h4><sup>$</sup>400<span> USD</span></h4>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <ul>
-              <li><i class="bi bi-check"></i> <span>Access to All Conference Sessions</span></li>
-              <li><i class="bi bi-check"></i> <span>Digital Workbook & Session Notes</span></li>
-              <li><i class="bi bi-check"></i> <span>Networking Opportunities</span></li>
-              <li><i class="bi bi-check"></i> <span>Private Conference WhatsApp Group</span></li>
-              <li><i class="bi bi-check"></i> <span>Live Q&A with Speakers</span></li>
-              <li><i class="bi bi-check"></i> <span>Premium Networking Meal</span></li>
-              <li><i class="bi bi-check"></i> <span>Conference Materials</span></li>
-              <li><i class="bi bi-check"></i> <span>Post-Conference Growth Plan</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 d-flex align-items-center justify-content-center">
-            <div class="text-center">
-              <p class="small mb-2">Secure Payment | Instant Confirmation</p>
-              <a href="#" class="buy-btn">Reserve My Spot - $400</a>
-            </div>
-          </div>
-        </div><!-- End Pricing Item -->
-
-        <div class="row gy-4 pricing-item featured mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-4 pricing-item featured" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
             <div>
-              <h3>NAIROBI EDITION - EARLY BIRD</h3>
+              <h3>NAIROBI EDITION</h3>
               <p class="small">Nairobi | November 16th, 2025</p>
               <div class="d-flex gap-2 mb-2">
-                <span class="badge bg-warning text-dark">Limited Time</span>
-                <span class="badge bg-danger">Only 47 Left!</span>
+                <span class="badge bg-danger">Limited Seats Available!</span>
               </div>
-              <div class="urgency-badge small">🔥 50% OFF - Save $200</div>
             </div>
           </div>
           <div class="col-lg-3 d-flex align-items-center justify-content-center">
@@ -1242,10 +1213,9 @@
               <div class="cta-section">
                 <h5 class="mb-3">Secure Your Spot Today!</h5>
                 <div class="d-grid gap-2">
-                  <a href="#buy-tickets" class="btn btn-primary btn-lg">Reserve Early Bird - $200</a>
-                  <a href="#buy-tickets" class="btn btn-outline-primary">Standard Ticket - $400</a>
+                  <a href="#buy-tickets" class="btn btn-primary btn-lg">Reserve Your Seat - $200</a>
                 </div>
-                <p class="small text-muted mt-2">Early bird pricing available for limited time only</p>
+                <p class="small text-muted mt-2">Limited seats available - secure your spot now!</p>
               </div>
             </div>
           </div><!-- End Contact Info -->
