@@ -245,6 +245,25 @@
       padding: 12px 20px;
     }
     
+    /* Mobile Responsiveness & Touch Optimizations */
+    
+    /* Touch-friendly elements */
+    .btn, .buy-btn, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    .navmenu ul li a {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    
+    /* Prevent zoom on form inputs */
+    input, select, textarea {
+      font-size: 16px;
+    }
+    
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
       .hero-title {
@@ -284,6 +303,82 @@
         width: 100%;
         margin-bottom: 0.5rem;
       }
+      
+      /* Topics Section Mobile */
+      .topics-section .row {
+        flex-direction: column;
+      }
+      
+      .topics-section .col-lg-5 {
+        margin-bottom: 2rem;
+      }
+      
+      /* Ticket Section Mobile */
+      .premium-ticket-card {
+        padding: 2rem 1.5rem !important;
+      }
+      
+      .premium-ticket-card .row {
+        flex-direction: column;
+      }
+      
+      .premium-ticket-card .col-lg-4,
+      .premium-ticket-card .col-lg-3 {
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      
+      .premium-ticket-card h4 {
+        font-size: 2.5rem !important;
+      }
+      
+      .premium-ticket-card .btn {
+        width: 100% !important;
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
+      }
+      
+      /* Feature Cards Mobile */
+      .feature-box, .attendee-card, .curriculum-card {
+        margin-bottom: 2rem;
+      }
+      
+      /* About Section Mobile */
+      .about-info .col-lg-10 {
+        padding: 0 15px;
+      }
+      
+      /* Gallery Mobile */
+      .venue-gallery img {
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      /* Testimonials Mobile */
+      .testimonial-card {
+        margin-bottom: 2rem;
+        padding: 1.5rem !important;
+      }
+      
+      /* FAQ Mobile */
+      .faq-item {
+        margin-bottom: 1rem;
+      }
+      
+      .faq-item h3 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+      
+      /* Takeaways Mobile */
+      .takeaway-item {
+        margin-bottom: 1.5rem;
+      }
+      
+      .takeaway-item h5 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
     }
     
     @media (max-width: 576px) {
@@ -307,6 +402,148 @@
       .floating-action-btn .btn {
         font-size: 0.9rem;
         padding: 10px 16px;
+      }
+      
+      /* Extra Small Mobile Optimizations */
+      .hero-description {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+      
+      .section-title p {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+      
+      .premium-ticket-card {
+        padding: 1.5rem 1rem !important;
+        margin: 0 10px;
+      }
+      
+      .premium-ticket-card h3 {
+        font-size: 1.5rem !important;
+      }
+      
+      .premium-ticket-card h4 {
+        font-size: 2rem !important;
+      }
+      
+      .premium-ticket-card h5 {
+        font-size: 1.1rem !important;
+      }
+      
+      .premium-ticket-card .btn {
+        padding: 12px 16px !important;
+        font-size: 0.95rem !important;
+      }
+      
+      .premium-ticket-card ul li {
+        font-size: 0.9rem !important;
+      }
+      
+      /* Navigation Mobile */
+      .navmenu ul {
+        padding: 0 20px;
+      }
+      
+      .navmenu ul li a {
+        font-size: 16px;
+        padding: 12px 0;
+      }
+      
+      /* Contact Section Mobile */
+      .contact-info {
+        padding: 1.5rem !important;
+      }
+      
+      .contact-item {
+        padding: 1rem !important;
+        margin-bottom: 1rem;
+      }
+      
+      /* Footer Mobile */
+      .footer-about,
+      .footer-links {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .footer .social-links {
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .premium-ticket-card h4 {
+        font-size: 1.8rem !important;
+      }
+      
+      .premium-ticket-card {
+        padding: 1rem 0.8rem !important;
+      }
+      
+      .container {
+        padding: 0 15px;
+      }
+      
+      /* Button adjustments for very small screens */
+      .btn {
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+      
+      .btn-lg {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+    
+    /* Landscape orientation optimizations */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .hero-title {
+        font-size: 1.5rem !important;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem !important;
+      }
+      
+      .section {
+        padding: 40px 0 !important;
+      }
+      
+      .premium-ticket-card {
+        padding: 1.5rem 1rem !important;
+      }
+    }
+    
+    /* High DPI displays */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .hero-video {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+      }
+    }
+    
+    /* Accessibility improvements */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
@@ -467,7 +704,7 @@
           </div>
         </div>
 
-        <div class="row mt-5 justify-content-center">
+        <div class="row mt-5 justify-content-center topics-section">
           <div class="col-lg-10">
             <h3 class="text-center mb-4">Topics We'll Cover</h3>
             <div class="row">
